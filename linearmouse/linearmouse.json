@@ -1,0 +1,53 @@
+{
+  "$schema" : "https:\/\/schema.linearmouse.app\/0.9.0",
+  "schemes" : [
+    {
+      "pointer" : {
+        "acceleration" : 0,
+        "speed" : 0.3,
+        "disableAcceleration" : false
+      },
+      "if" : {
+        "device" : {
+          "productName" : "M720 Triathlon",
+          "serialNumber" : "509A8A49302B641A",
+          "productID" : "0xb015",
+          "category" : "mouse",
+          "vendorID" : "0x46d"
+        }
+      },
+      "scrolling" : {
+        "speed" : {
+          "vertical" : 2
+        },
+        "acceleration" : {
+          "vertical" : 1
+        },
+        "reverse" : {
+          "vertical" : true
+        },
+        "distance" : {
+          "vertical" : "auto"
+        }
+      }
+    },
+    {
+      "pointer" : {
+        "disableAcceleration" : true
+      },
+      "if" : {
+        "device" : {
+          "productName" : "USB Receiver",
+          "productID" : "0xc539",
+          "category" : "mouse",
+          "vendorID" : "0x46d"
+        }
+      },
+      "scrolling" : {
+        "reverse" : {
+          "vertical" : true
+        }
+      }
+    }
+  ]
+}
