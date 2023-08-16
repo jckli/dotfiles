@@ -14,3 +14,5 @@ lsp.marksman.setup{}
 lsp.jsonls.setup{}
 lsp.html.setup{}
 lsp.cssls.setup{}
+lsp.pyright.setup{}
+lsp.ccls.setup{}
