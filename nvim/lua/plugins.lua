@@ -101,6 +101,7 @@ return require("packer").startup(function(use)
 	}
 	use {
 		"nvimdev/guard.nvim",
+		requires = { "nvimdev/guard-collection" },
 		config = function()
 			require "config.guard"
 		end

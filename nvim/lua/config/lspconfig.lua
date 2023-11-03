@@ -16,3 +16,4 @@ lsp.html.setup{}
 lsp.cssls.setup{}
 lsp.pyright.setup{}
 lsp.ccls.setup{}
+lsp.racket_langserver.setup{}
