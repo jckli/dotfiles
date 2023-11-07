@@ -6,6 +6,7 @@ ft("c,cpp"):fmt({
 	stdin = true,
 })
 ft("typescript,javascript,typescriptreact,javascriptreact"):fmt("prettierd")
+ft("go"):fmt("golines"):append("gofmt")
 
 require("guard").setup({
     -- the only options for the setup function
