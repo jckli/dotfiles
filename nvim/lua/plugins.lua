@@ -8,102 +8,115 @@ vim.cmd([[
 ]])
 
 return require("packer").startup(function(use)
-	use "wbthomason/packer.nvim"
+	use("wbthomason/packer.nvim")
 
-	use {
+	use({
 		"nvim-tree/nvim-tree.lua",
 		requires = {
 			"nvim-tree/nvim-web-devicons", -- optional
 		},
 		config = function()
-			require "config.nvim-tree"
-		end
-	}
+			require("config.nvim-tree")
+		end,
+	})
 
-	use {
+	use({
 		"andweeb/presence.nvim",
 		config = function()
-			require "config.presence"
-		end
-	}
+			require("config.presence")
+		end,
+	})
 
-	use {
+	use({
 		"catppuccin/nvim",
 		as = "catppuccin",
 		config = function()
-			require "config.catppuccin"
-		end
-	}
+			require("config.catppuccin")
+		end,
+	})
 
-	use {
+	use({
 		"nvim-lualine/lualine.nvim",
-	  	requires = { "nvim-tree/nvim-web-devicons", opt = true },
+		requires = { "nvim-tree/nvim-web-devicons", opt = true },
 		config = function()
-			require "config.lualine"
-		end
-	}
+			require("config.lualine")
+		end,
+	})
 
-	use {
+	use({
 		"akinsho/bufferline.nvim",
 		tag = "v3.*",
 		requires = "nvim-tree/nvim-web-devicons",
 		config = function()
-			require "config.bufferline"
-		end
-	}
+			require("config.bufferline")
+		end,
+	})
 
-	use {
+	use({
 		"neovim/nvim-lspconfig",
 		config = function()
-			require "config.lspconfig"
-		end
-	}
+			require("config.lspconfig")
+		end,
+	})
 
-	use {
+	use({
 		"hrsh7th/nvim-cmp",
 		requires = {
-		    "hrsh7th/cmp-buffer", "hrsh7th/cmp-nvim-lsp",
+			"hrsh7th/cmp-buffer",
+			"hrsh7th/cmp-nvim-lsp",
 		},
 		config = function()
-			require "config.cmp"
-		end
-	}
+			require("config.cmp")
+		end,
+	})
 
-	use "onsails/lspkind.nvim"
+	use("onsails/lspkind.nvim")
 
-	use {
+	use({
 		"L3MON4D3/LuaSnip",
 		tag = "v<CurrentMajor>.*",
-		run = "make install_jsregexp"
-	}
+		run = "make install_jsregexp",
+	})
 
-	use {
+	use({
 		"nvim-treesitter/nvim-treesitter",
 		requires = {
-			"windwp/nvim-ts-autotag", "windwp/nvim-autopairs",
+			"windwp/nvim-ts-autotag",
+			"windwp/nvim-autopairs",
 		},
 		run = ":TSUpdate",
 		config = function()
-			require "config.treesitter"
-		end
-	}
+			require("config.treesitter")
+		end,
+	})
 
-	use {
-		"github/copilot.vim"
-	}
+	use({
+		"github/copilot.vim",
+	})
 
-	use {
-	  	"nvim-telescope/telescope.nvim", tag = "0.1.1",
-		requires = { {"nvim-lua/plenary.nvim"} },
-		config = function ()
-			require "config.telescope"
-		end
-	}
-	use {
-		"nvimdev/guard.nvim",
-		requires = { "nvimdev/guard-collection" },
+	use({
+		"nvim-telescope/telescope.nvim",
+		branch = "0.1.x",
+		requires = { { "nvim-lua/plenary.nvim" } },
 		config = function()
-			require "config.guard"
-		end
-	}
+			require("config.telescope")
+		end,
+	})
+	use({
+		"nvimtools/none-ls.nvim",
+		requires = { "nvim-lua/plenary.nvim" },
+		config = function()
+			require("config.none-ls")
+		end,
+	})
+	use({
+		"akinsho/flutter-tools.nvim",
+		requires = {
+			"nvim-lua/plenary.nvim",
+			"stevearc/dressing.nvim", -- optional for vim.ui.select
+		},
+		config = function()
+			require("config.flutter-tools")
+		end,
+	})
 end)
